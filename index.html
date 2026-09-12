@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="menu">
+                ☰
+            </div>
+
+            <div class="logo">
+                🌤️
+                <span>Weather Dashboard</span>
+            </div>
+
+            <button class="sign-in">
+                👤 Sign in
+            </button>
+
+        </header>
+
+
+        <div class="search-area">
+
+            <div class="search-box">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search by city or zip code"
+                >
+
+                <button id="searchBtn">
+                    🔍 Search
+                </button>
+
+            </div>
+
+            <button id="locationBtn" class="location-btn">
+                📍 Use My Location
+            </button>
+
+        </div>
+
+
+        <p id="loading" class="loading">
+            Loading...
+        </p>
+
+        <p id="errorMessage" class="error"></p>
+
+
+        <div id="weatherContainer" class="weather-container">
+
+            <div class="location">
+                <p class="location-place">
+                    📍 <span id="cityName">City</span>,
+                    <span id="countryName">Country</span>
+                </p>
+            </div>
+
+
+            <div class="current-weather">
+
+                <div class="current-left">
+
+                    <span id="weatherIcon" class="weather-icon">
+                        🌤️
+                    </span>
+
+                    <div>
+                        <div class="temperature">
+                            <span id="temperature">--</span>°C
+                        </div>
+
+                        <p id="weatherCondition">
+                            Weather condition
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-details">
+
+                    <div class="weather-detail">
+                        <span>💧</span>
+
+                        <div>
+                            <small>Humidity</small>
+                            <strong>
+                                <span id="humidity">--</span>%
+                            </strong>
+                        </div>
+                    </div>
+
+
+                    <div class="weather-detail">
+                        <span>💨</span>
+
+                        <div>
+                            <small>Wind Speed</small>
+                            <strong>
+                                <span id="windSpeed">--</span> km/h
+                            </strong>
+                        </div>
+                    </div>
+
+
+                    <div class="weather-detail">
+                        <span>🌡️</span>
+
+                        <div>
+                            <small>Temperature</small>
+                            <strong>
+                                <span id="temperatureDetail">--</span>°C
+                            </strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <section class="forecast-section">
+
+            <div class="forecast-heading">
+
+                <h2>
+                    Hourly Forecast
+                </h2>
+
+                <span>
+                    Next 8 hours →
+                </span>
+
+            </div>
+
+
+            <div
+                id="forecastContainer"
+                class="forecast-container">
+            </div>
+
+        </section>
+
+
+        <section class="conditions-section">
+
+            <h2>
+                Conditions
+            </h2>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

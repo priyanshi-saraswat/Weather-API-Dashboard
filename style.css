@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    padding: 20px;
+    color: #222;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.menu {
+    width: 42px;
+    height: 42px;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sign-in {
+    border: none;
+    background: white;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.sign-in:hover {
+    background: #f5f5f5;
+}
+
+
+/* Search */
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.search-icon {
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px 12px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 13px 22px;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #444;
+}
+
+.location-btn {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.location-btn:hover {
+    background: #f5f5f5;
+}
+
+
+/* Loading and Error */
+
+.loading {
+    display: none;
+    text-align: center;
+    margin: 15px;
+    font-size: 16px;
+}
+
+.error {
+    color: #b00020;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* Current Weather */
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.location {
+    margin-bottom: 15px;
+}
+
+.location-place {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.current-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 300px;
+}
+
+.weather-icon {
+    font-size: 65px;
+}
+
+.temperature {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.condition {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* Weather Details */
+
+.weather-details {
+    display: flex;
+    gap: 40px;
+    border-left: 1px solid #ddd;
+    padding-left: 35px;
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 120px;
+}
+
+.weather-detail > span {
+    font-size: 18px;
+}
+
+.weather-detail small {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.weather-detail strong {
+    font-size: 14px;
+}
+
+
+/* Forecast */
+
+.forecast-section {
+    margin-top: 22px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 14px;
+    padding: 15px;
+}
+
+.forecast-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.forecast-heading h2 {
+    font-size: 18px;
+}
+
+.forecast-heading span {
+    font-size: 12px;
+    color: #1674e8;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #dbe3ef;
+    border-radius: 7px;
+    padding: 12px 5px;
+    text-align: center;
+    min-height: 115px;
+}
+
+.forecast-card h3 {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.forecast-card .forecast-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.forecast-card p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Conditions */
+
+.conditions-section {
+    margin-top: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.conditions-section h2 {
+    font-size: 18px;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .forecast-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .current-weather {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .weather-details {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding-left: 0;
+        padding-top: 15px;
+        justify-content: space-between;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .header {
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .menu {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .sign-in {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .search-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box button {
+        padding: 13px 15px;
+    }
+
+    .location-btn {
+        width: 100%;
+    }
+
+    .weather-container {
+        padding: 15px;
+    }
+
+    .current-left {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .weather-icon {
+        font-size: 50px;
+    }
+
+    .temperature {
+        font-size: 36px;
+    }
+
+    .weather-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .weather-detail {
+        min-width: 0;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .forecast-card {
+        min-height: 110px;
+    }
+}
