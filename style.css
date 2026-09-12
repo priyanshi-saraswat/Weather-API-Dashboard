@@ -48,7 +48,7 @@ body {
     font-weight: bold;
 }
 
-.sign-in {
+/* .sign-in {
     border: none;
     background: white;
     padding: 9px 18px;
@@ -60,7 +60,7 @@ body {
 
 .sign-in:hover {
     background: #f5f5f5;
-}
+} */
 
 
 /* Search */
